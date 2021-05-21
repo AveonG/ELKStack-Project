@@ -39,7 +39,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
+| TODO     |          |            | Linux            |
 | TODO     |          |            |                  |
 | TODO     |          |            |                  |
 
@@ -47,11 +47,11 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the JumpBox-OffSec machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- 24.99.128.156
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the JumpBox-OffSec machine.
+- Which machine did you allow to access your ELK VM? I allowed only the JumpBox-OffSec machine to access the ELK VM through the ansible container. What was its IP address? The IP address of that machine is 10.1.0.4 for the private IP and the public IP is 52.232.176.236.
 
 A summary of the access policies in place can be found in the table below.
 
