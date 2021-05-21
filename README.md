@@ -26,7 +26,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly reliable, in addition to restricting access to the network.
+Load balancing ensures that the application will be highly reliable and resilient, in addition to restricting access to the network.
 - What aspect of security do load balancers protect? 
 The load balancer plays an important security role as computing moves and routing client requests across all servers capable of fulfilling those request in a way that maximizes speed and capacity to ensure that no one server is being overworked. The load balancer plays a role of a traffic cop you could say.
 
@@ -109,22 +109,21 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the Install-elk.yml file to /etc/ansible.
-- Update the hosts file to include the the elk Private IP 10.2.0.4 under the uncommented and added [elk] section.
-- Run the playbook, which is ansible-playbook Install-elk.yml and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected. In my case it was http://40.77.27.250:5601/app/kibana.
+- Copy the playbook files (OffSec-install, install-elk, filebeat-playbook, and metricbeat-playbook file to /etc/ansible/roles.
+- Update the hosts file to include the the webservers machines internal IP addresses under the uncommented webservers section. Add the internal IP of the elk vm under the elk uncommented section.
+- Run the playbook, which is ansible-playbook [playbook name] and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected. In my case it was http://40.77.27.250:5601/app/kibana.
 
 - Which file is the playbook?
 The playbook files are any files that end with .yml which stands for YAML.
 
 -  Where do you copy it?
-You would copy the playbook files to the ansible container in the /etc/ansible after you get access to the jump box and connect to the ansible docker container.
+You would copy the playbook files to the ansible container in the /etc/ansible/roles after you get access to the jump box and connect to the ansible docker container.
 
 - Which file do you update to make Ansible run the playbook on a specific machine?
-You would update the hots file that is located in the /etc/ansible directory.
+You would update the host file that is located in the /etc/ansible directory.
 
 -  How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 You would specify which machine to install the elk server on in the playbook in the host area. You would specify what machine to install the ELK server with the hosts column being labeled with elk and to specify what machines you woud install filebeat on you would install on the webservers you are going to monitor so you would put in the host column in the playbook webservers. The hosts file you updated under webservers and elk with the IP addresses, you would be putting the name so webservers for the webservers and the elk for the elk server.
 
 - Which URL do you navigate to in order to check that the ELK server is running?
 http://[your.ELK-VM.External.IP]:5601/app/kibana
-In my case it was http://40.77.27.250:5601/app/kibana.
