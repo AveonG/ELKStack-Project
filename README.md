@@ -8,10 +8,10 @@ https://github.com/AveonG/ELKStack-Project/blob/main/Diagrams/Network%20_Topolog
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/OffSecInstall.yml
-
-
-
+  - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/OffSecInstall.yml
+  - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/install-elk.yml
+  - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/filebeat-playbook.yml
+  - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/metricbeat-playbook.yml
 
 This document contains the following details:
 - Description of the Topologu
