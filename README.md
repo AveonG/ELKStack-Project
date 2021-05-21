@@ -120,7 +120,7 @@ The playbook files are any files that end with .yml which stands for YAML.
 You would copy the playbook files to the ansible container in the /etc/ansible/roles after you get access to the jump box and connect to the ansible docker container.
 
 - Which file do you update to make Ansible run the playbook on a specific machine?
-You would update the host file that is located in the /etc/ansible directory.
+You would update the hosts file that is located in the /etc/ansible directory.
 
 -  How do I specify which machine to install the ELK server on versus which to install Filebeat on?
 You would specify which machine to install the elk server on in the playbook in the host area. You would specify what machine to install the ELK server with the hosts column being labeled with elk and to specify what machines you woud install filebeat on you would install on the webservers you are going to monitor so you would put in the host column in the playbook webservers. The hosts file you updated under webservers and elk with the IP addresses, you would be putting the name so webservers for the webservers and the elk for the elk server.
