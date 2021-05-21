@@ -67,16 +67,14 @@ The IP address of that machine is 10.1.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes                 | 24.99.128.156        |
-| Web1 Sec | No                  | 10.1.0.4             |
-| Web2 Sec | No                  | 10.1.0.4             |
-| Web3 Sec | No                  | 10.1.0.4             |
-| ELK-VM   | Yes                 | 10.1.0.4             |
-                                   24.99.128.156         
-|Load
-|Balancer
+| Name          | Publicly Accessible | Allowed IP Addresses       |
+|---------------|---------------------|----------------------------|
+| Jump Box      | Yes                 | 24.99.128.156              |
+| Web1 Sec      | No                  | 10.1.0.4                   |
+| Web2 Sec      | No                  | 10.1.0.4                   |
+| Web3 Sec      | No                  | 10.1.0.4                   |
+| ELK-VM        | Yes                 |  10.1.0.4 24 24.99.128.156 |
+| Load Balancer | Yes                 | 24.99.128.156              |
 
 ### Elk Configuration
 
