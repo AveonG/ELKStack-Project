@@ -27,21 +27,28 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly reliable, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
+- What aspect of security do load balancers protect? 
+The load balancer plays an important security role as computing moves and routing client requests across all servers capable of fulfilling those request in a way that maximizes speed and capacity to ensure that no one server is being overworked. The load balancer plays a role of a traffic cop you could say.
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- What is the advantage of a jump box?
+The advantage of using a jump box is to limit the access to any of the other machines that are on the network. The jumpbox is the point you would have to enter into to be able to access the network. By implementing ssh keys instead of paswords a person would have to have the key pair that is stored on my computer to even get acess to the jump box. It a secure method to use and only allows a single point of entry which is easier to monitor.
 
-The configuration details of each machine may be found below.
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network and system files.
+- What does Filebeat watch for?
+Filebeat is for the monitoring of events, log data, and files through the elk sever then proceeds to move them to another part of Kibana called Elasticsearch or the Logstash area.
+
+- What does Metricbeat record?
+Metricbeat is used to periodically collect metrics from the operating systems and from the services running on the server then will ship them out to the output that you assign such as Elasticsearch or Logstash.
+
+The configuration details of each OffSec VMs and ELK machine may be found below.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump-Box | Gateway  | 10.1.0.4   | Linux            |
-| Web-1 SEC| Webserver| 10.1.0.5   | Linux            |
-| Web-2 SEC| Webserver| 10.1.0.6   | Linux            |
-| Web-3 SEC| Webserver| 10.1.0.7   | Linux            |
-| ELK-VM   | Webserver| 10.2.0.4   | Linux            | 
+| Jump-Box | Gateway  | 10.1.0.4   | Linux (Ubuntu)   |
+| Web-1 SEC| Webserver| 10.1.0.5   | Linux (Ubuntu)   |
+| Web-2 SEC| Webserver| 10.1.0.6   | Linux (Ubuntu)   |
+| Web-3 SEC| Webserver| 10.1.0.7   | Linux (Ubuntu)   |
+| ELK-VM   | Webserver| 10.2.0.4   | Linux (Ubuntu)   | 
 
 ### Access Policies
 
@@ -51,15 +58,25 @@ Only the JumpBox-OffSec machine can accept connections from the Internet. Access
 - 24.99.128.156
 
 Machines within the network can only be accessed by the JumpBox-Offsec machine.
-- Which machine did you allow to access your ELK VM? I allowed only the JumpBox-OffSec machine to access the ELK VM through the ansible container. What was its IP address? The IP address of that machine is 10.1.0.4.
+
+- Which machine did you allow to access your ELK VM?
+I allowed only the JumpBox-OffSec machine to access the ELK VM through the ansible container.
+
+- What was its IP address?
+The IP address of that machine is 10.1.0.4.
 
 A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Jump Box | Yes                 | 24.99.128.156        |
+| Web1 Sec | No                  | 10.1.0.4             |
+| Web2 Sec | No                  | 10.1.0.4             |
+| Web3 Sec | No                  | 10.1.0.4             |
+| ELK-VM   | Yes                 | 10.1.0.4             |
+|          |                     |24.99.128.156         |
+|Load
+|Balancer
 
 ### Elk Configuration
 
