@@ -74,7 +74,7 @@ A summary of the access policies in place can be found in the table below.
 | Web2 Sec | No                  | 10.1.0.4             |
 | Web3 Sec | No                  | 10.1.0.4             |
 | ELK-VM   | Yes                 | 10.1.0.4             |
-|          |                     |24.99.128.156         |
+                                   24.99.128.156         
 |Load
 |Balancer
 
