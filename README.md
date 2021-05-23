@@ -8,7 +8,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
 
-  - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/OffSecInstall.yml
+  - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/DVWA-Install.yml  
   - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/install-elk.yml
   - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/filebeat-playbook.yml
   - https://github.com/AveonG/ELKStack-Project/blob/main/Ansible/metricbeat-playbook.yml
@@ -91,7 +91,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-- https://github.com/AveonG/ELKStack-Project/blob/main/Images/sebp:elk%20screenshoot.png
+- ![Docker-PS](https://github.com/AveonG/ELKStack-Project/blob/main/Images/sebp:elk%20screenshoot.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -109,7 +109,7 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the playbook files (OffSec-install, install-elk, filebeat-playbook, and metricbeat-playbook file to /etc/ansible/roles.
+- Copy the playbook files (DVWA-install, install-elk, filebeat-playbook, and metricbeat-playbook file to /etc/ansible/roles.
 - Update the hosts file to include the the webservers machines internal IP addresses under the uncommented webservers section. Add the internal IP of the elk vm under the elk uncommented section.
 - Run the playbook, which is ansible-playbook [playbook name] and navigate to http://[your.ELK-VM.External.IP]:5601/app/kibana to check that the installation worked as expected. In my case it was http://40.77.27.250:5601/app/kibana.
 
